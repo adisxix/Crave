@@ -15,6 +15,6 @@ Crave is a modern, responsive landing page for a food delivery service. Designed
 
 # Tech Stack
 
-- HTML – Structure and content of the page.
-- CSS – Styling using Flexbox and Grid for responsive layouts.
-- Font Awesome – Icons for visuals and navigation.
+- HTML
+- CSS 
+- Font Awesome
