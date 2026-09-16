@@ -3,261 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crave Landing Page</title>
+    <title>Crave — Fresh & Fast Food Delivery</title>
+    <meta name="description" content="Order handcrafted burgers, wood-fired pizzas, and street tacos delivered hot and fresh.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-cookie-bite"></i>
+<!-- Header -->
+<header id="top">
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img src="cookie-logo.png" alt="Crave Logo" class="logo-cookie-img" width="34" height="34">
             <span>Crave</span>
-        </div>
+        </a>
+
+        <!-- Mobile nav toggle (pure CSS) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <label for="nav-toggle" class="nav-toggle-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
         <div class="nav-items">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#Menu">Menu</a></li>
-                <li><a href="#Restaurant">Restaurant</a></li>
-                <li><a href="#About Us">About Us</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#features">Why Crave</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="ordernow">
-                <button>Order Now</button>
+
+            <div class="nav-actions">
+                <a href="#menu" class="btn-nav-order">Order Now</a>
             </div>
         </div>
-    </div>
+    </nav>
 </header>
-
-<section class="hero">
-    <video autoplay muted loop class="hero-video">
-        <source src="bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div class="hero-content">
-        <h1>Your Cravings, Delivered.</h1>
-        <p>Get your favorite meals delivered quickly from a wide range of restaurants.</p>
-        <p>Satisfy your hunger with just a few clicks.</p>
-    </div>
-
-    <div class="button-container">
-        <button class="ordernow">Order Now</button>
-        <button class="exploremenu">Explore Menu</button>
-    </div>
-
-</section>
-
 
 <main>
 
-<section class="offers">
-    <h1>Special Offers & Promotions</h1>
-    <p>Don't miss out on our exclusive deals!</p>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video" poster="burger.avif">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-overlay"></div>
 
- <div class="offer-cards">
-
-    <div class="card">
-        <div class="card-img">
-            <img src="burger.avif" alt="Burger">
-        </div>
-        <div class="card-content">
-            <p>Get a juicy burger, crispy fries, and a refreshing drink for just $9.99!</p>
-            <button>Order Now</button>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img">
-            <img src="pizza.avif" alt="Pizza">
-        </div>
-        <div class="card-content">
-            <p>Enjoy a large pizza with your choice of toppings for only $12.99!</p>
-            <button>Order Now</button>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img">
-            <img src="tacos.avif" alt="Tacos">
-        </div>
-        <div class="card-content">
-            <p>Indulge in a plate of delicious tacos for just $10.99!</p>
-            <button>Order Now</button>
-        </div>
-    </div>
-
-</div>
-
-<div class="features">
-    <h1>Why Choose Crave?</h1>
-    <p>Experience the best in food delivery with Crave's commitment to speed, variety, convenience, and real-time tracking.</p>
-
-    <div class="features-cards">
-        <div class="feature">
-            <div class="icon">
-                <i class="fa-regular fa-clock"></i>
+        <div class="hero-content">
+            <h1>Your Cravings,<br><span class="highlight-text">Delivered Fast.</span></h1>
+            <p class="hero-subtitle">Handcrafted smashburgers, blistered wood-fired pizzas, and sizzling street tacos — delivered fresh from our kitchen to your door.</p>
+            
+            <div class="button-container">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Explore Menu</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Order Now</span>
+                </a>
             </div>
-            <div class="feature-content">
-                <h2>Fast Delivery</h2>
-                <p>Get your food delivered in under 30 minutes.</p>
+
+            <div class="hero-perks">
+                <div class="perk-item">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    <span>Delivered Piping Hot</span>
+                </div>
+                <div class="perk-divider">•</div>
+                <div class="perk-item">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span>Free Delivery on $20+</span>
+                </div>
+                <div class="perk-divider">•</div>
+                <div class="perk-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.9 / 5 Rating</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="feature">
-            <div class="icon">
-                <i class="fa-regular fa-star"></i>
-            </div>
-            <div class="feature-content">
-                <h2>Top Quality</h2>
-                <p>Only the best restaurants and meals for you.</p>
-            </div>
+    <!-- Offers / Menu -->
+    <section class="offers" id="menu">
+        <div class="section-header">
+            <span class="section-tag">Chef's Specials</span>
+            <h2>Today's Featured Deals</h2>
+            <p>Fresh ingredients, bold flavors, and limited-time combos.</p>
         </div>
 
-        <div class="feature">
-            <div class="icon">
-                <i class="fa-solid fa-credit-card"></i>
+        <div class="offer-cards">
+
+            <!-- Burger Card -->
+            <div class="card">
+                <div class="card-badge">Bestseller</div>
+                <div class="card-img">
+                    <img src="burger.avif" alt="Double Angus Beef Smashburger with fries" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="prep-time"><i class="fa-regular fa-clock"></i> 18-22 min</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.9 (480+)</span>
+                    </div>
+                    <h3>The Midnight Crave Combo</h3>
+                    <p>Double Angus beef smash patties, melted cheddar, caramelized onions, and garlic aioli on toasted brioche. Includes seasoned fries and a drink.</p>
+                    <div class="card-footer">
+                        <div class="price-wrapper">
+                            <span class="current-price">$9.99</span>
+                            <span class="original-price">$14.99</span>
+                        </div>
+                        <a href="#contact" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
             </div>
-            <div class="feature-content">
-                <h2>Easy Payment</h2>
-                <p>Pay Securely with multiple payment options.</p>
+
+            <!-- Pizza Card -->
+            <div class="card">
+                <div class="card-badge">Chef's Pick</div>
+                <div class="card-img">
+                    <img src="pizza.avif" alt="Wood fired artisan pizza" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="prep-time"><i class="fa-regular fa-clock"></i> 20-25 min</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.8 (390+)</span>
+                    </div>
+                    <h3>Wood Fired Truffle Pepperoni</h3>
+                    <p>Slow-fermented sourdough crust, San Marzano tomato sauce, fresh mozzarella, crispy pepperoni, and a drizzle of hot chili honey.</p>
+                    <div class="card-footer">
+                        <div class="price-wrapper">
+                            <span class="current-price">$12.99</span>
+                            <span class="original-price">$17.50</span>
+                        </div>
+                        <a href="#contact" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Tacos Card -->
+            <div class="card">
+                <div class="card-badge">Popular</div>
+                <div class="card-img">
+                    <img src="tacos.avif" alt="Beef birria street tacos" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="prep-time"><i class="fa-regular fa-clock"></i> 15-20 min</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.9 (520+)</span>
+                    </div>
+                    <h3>Slow Braised Birria Tacos Trio</h3>
+                    <p>Three crispy dipped corn tortillas filled with tender shredded beef, melted Oaxaca cheese, fresh cilantro, onions, and a side of savory dipping consommé.</p>
+                    <div class="card-footer">
+                        <div class="price-wrapper">
+                            <span class="current-price">$10.99</span>
+                            <span class="original-price">$15.00</span>
+                        </div>
+                        <a href="#contact" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>Why Food Lovers Pick Crave</h2>
+            <p>Fast dispatch, temperature-controlled packaging, and reliable support.</p>
         </div>
 
-        <div class="feature">
-            <div class="icon">
-                <i class="fa-regular fa-heart"></i>
+        <div class="features-cards">
+            <div class="feature">
+                <div class="icon-wrap">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Fast Dispatch</h3>
+                    <p>Local kitchen hubs ensure your order is cooked fresh and delivered promptly.</p>
+                </div>
             </div>
-            <div class="feature-content">
-                <h2>Customer Care</h2>
-                <p>We’re here for you 24/7 for any assistance.</p>
+
+            <div class="feature">
+                <div class="icon-wrap">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Thermal Insulated Bags</h3>
+                    <p>Custom insulated delivery packaging keeps hot items hot and fried foods crispy.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon-wrap">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Easy Payment</h3>
+                    <p>Pay securely with cards, digital wallets, UPI, or cash on delivery.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon-wrap">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always online to help with order tracking or special instructions.</p>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="feedbacks">
-    <h1>What Our Customers Say</h1>
+    <!-- Reviews -->
+    <section class="feedbacks" id="reviews">
+        <div class="section-header">
+            <span class="section-tag">Customer Stories</span>
+            <h2>What People Are Saying</h2>
+            <p>Real feedback from customers who order regularly.</p>
+        </div>
 
-    <div class="feedback-cards-container">
-        <div class="feedback-card">
-            <div class="feedback">
+        <div class="feedback-cards-container">
+            <div class="feedback-card">
                 <div class="customer-info">
-                    <img src="pfp1.avif" alt="Customer" class="customer-img">
+                    <img src="pfp1.avif" alt="Maya Patel" class="customer-img" loading="lazy">
                     <div class="customer-details">
-                        <h3>John Doe</h3>
-                        <span class="review-date">Oct 3, 2025</span>
+                        <h3>Maya Patel</h3>
+                        <span class="review-date">Delhi</span>
                     </div>
                 </div>
                 <div class="stars">
-                    ★★★★☆
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
                 <p class="review-text">
-                    This service is amazing! Highly recommend to everyone looking for quality and speed.
+                    "The smashburger arrived hot with crispy edges. Truly one of the best food delivery experiences I've had lately."
                 </p>
             </div>
-        </div>
 
-        <div class="feedback-card">
-            <div class="feedback">
+            <div class="feedback-card">
                 <div class="customer-info">
-                    <img src="pfp2.avif" alt="Customer" class="customer-img">
+                    <img src="pfp2.avif" alt="Sarah & Marcus" class="customer-img" loading="lazy">
                     <div class="customer-details">
-                        <h3>Jane Smith</h3>
-                        <span class="review-date">Oct 2, 2025</span>
+                        <h3>Sarah & Marcus</h3>
+                        <span class="review-date">South Extension</span>
                     </div>
                 </div>
                 <div class="stars">
-                    ★★★★★
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
                 <p class="review-text">
-                    Exceptional service and fast delivery! Very satisfied with my experience.
+                    "The hot honey drizzle on their pepperoni pizza is incredible. Clean packaging, never soggy, always on point."
                 </p>
             </div>
-        </div>
 
-        <div class="feedback-card">
-            <div class="feedback">
+            <div class="feedback-card">
                 <div class="customer-info">
-                    <img src="pfp3.avif" alt="Customer" class="customer-img">
+                    <img src="pfp3.avif" alt="David Chen" class="customer-img" loading="lazy">
                     <div class="customer-details">
-                        <h3>Mike Johnson</h3>
-                        <span class="review-date">Oct 1, 2025</span>
+                        <h3>David Chen</h3>
+                        <span class="review-date">GK-1</span>
                     </div>
                 </div>
                 <div class="stars">
-                    ★★★★☆
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
                 <p class="review-text">
-                    Great quality and very reliable. Will definitely order again!
+                    "The birria consommé was packed securely with zero spills. That attention to packaging detail makes a huge difference."
                 </p>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-
-
-</section>
+    <!-- Call to action -->
+    <section class="cta-banner">
+        <div class="cta-inner">
+            <div class="cta-text">
+                <h2>Ready to Satisfy Your Craving?</h2>
+                <p>Use code <strong class="promo-code">CRAVEFIRST</strong> for 20% off your first order.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Order Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
 </main>
 
-
-<footer>
+<!-- Footer -->
+<footer id="contact">
   <div class="foot">
 
-    <div class="footer-section">
+    <div class="footer-section brand-col">
       <div class="logo">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <span>Crave</span>
-        <p>Your favorite food, delivered fast.</p>
+        <div class="footer-brand-header">
+            <img src="cookie-logo.png" alt="Crave Logo" class="footer-cookie-img" width="26" height="26">
+            <span>Crave</span>
+        </div>
+        <p class="footer-tagline">Chef-crafted comfort food delivered fresh to your doorstep.</p>
+      </div>
+      <div class="social-icons">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
       </div>
     </div>
 
     <div class="footer-section">
       <h3>Quick Links</h3>
       <ul class="footer-links">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#features">Why Crave</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
       <h3>Support</h3>
       <ul class="footer-links">
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Live Chat</a></li>
+        <li><a href="#contact">Help Center</a></li>
+        <li><a href="#contact">Delivery Areas</a></li>
+        <li><a href="#contact">Terms of Service</a></li>
+        <li><a href="#contact">Privacy Policy</a></li>
       </ul>
     </div>
 
-    <div class="footer-section">
+    <div class="footer-section contact-col">
       <h3>Contact Us</h3>
-      <p>76E Greater Kailash, New Delhi, India 122004</p>
-      <p>Phone : +91 8894109654</p>
-      <p>Email : cravesupport@gmail.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> 76E Greater Kailash, New Delhi</p>
+      <p><i class="fa-solid fa-phone"></i> +91 88941 09654</p>
+      <p><i class="fa-solid fa-envelope"></i> orders@cravefood.in</p>
     </div>
-
-    <div class="footer-section social-icons">
-  <i class="fa-brands fa-twitter"></i>
-  <i class="fa-brands fa-facebook"></i>
-  <i class="fa-brands fa-instagram"></i>
-    </div>
-
 
   </div>
 
   <div class="rights">
-    <p>@ 2025 Crave. All rights reserved.</p>
+    <p>&copy; 2025 Crave. All rights reserved.</p>
   </div>
 </footer>
-
-
 
 </body>
 </html>
